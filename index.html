@@ -1,301 +1,259 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f8f7">
-  <meta name="description" content="Официальная визитка Горячева Дмитрия Александровича, директора МАУ «Горизонт». Контакты, адреса и фотографии лагеря.">
-  <title>Горячев Дмитрий Александрович — МАУ «Горизонт»</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --ink:#172b31; --muted:#65777a; --green:#16866d; --green-dark:#0c6658;
-      --blue:#367da5; --paper:#f4f8f7; --line:rgba(30,75,76,.12);
-      --glass:rgba(250,253,252,.76); --shadow:0 28px 90px rgba(21,62,66,.16);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    .hero{
-      position:sticky;top:0;height:100svh;min-height:620px;z-index:0;overflow:hidden;
-      background:#dce8e4;
-    }
-    .hero::before{
-      content:"";position:absolute;inset:0;background:
-      linear-gradient(180deg,rgba(8,32,35,.04) 15%,rgba(8,32,35,.04) 42%,rgba(8,32,35,.62) 100%);
-      z-index:1
-    }
-    .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 27%;transform:scale(1.015)}
-    .topbar{position:absolute;z-index:2;top:0;left:0;right:0;padding:28px clamp(22px,5vw,76px);display:flex;justify-content:space-between;align-items:center;color:white}
-    .brand{display:flex;align-items:center;gap:12px;color:white}
-    .brand-word{font-size:15px;font-weight:800;letter-spacing:.14em}
-    .brand-dot{color:#8fe0c6}
-    .brand-divider{height:17px;width:1px;background:rgba(255,255,255,.48)}
-    .brand-caption{font-size:10px;font-weight:700;letter-spacing:.2em;opacity:.78}
-    .top-actions{display:flex;align-items:center;gap:9px}.lang-switch{border:1px solid rgba(255,255,255,.5);padding:10px 13px;border-radius:12px;color:white;background:rgba(255,255,255,.14);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);font-size:10px;font-weight:800;letter-spacing:.1em;cursor:pointer;transition:.22s}.lang-switch:hover{background:white;color:var(--ink)}.top-link{border:1px solid rgba(255,255,255,.42);padding:11px 18px;border-radius:14px;font-size:11px;font-weight:800;letter-spacing:.04em;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:rgba(255,255,255,.14);transition:.25s}
-    .top-link:hover{background:white;color:var(--ink)}
-    .hero-copy{position:absolute;z-index:2;left:clamp(24px,8vw,120px);right:24px;bottom:clamp(110px,15vh,165px);color:white;max-width:900px;text-shadow:0 2px 24px rgba(0,0,0,.18)}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;opacity:.94;margin-bottom:22px}
-    .eyebrow::before{content:"";width:24px;height:1px;background:#8fe0c6}
-    h1{font-size:clamp(52px,8.3vw,112px);line-height:.94;letter-spacing:-.075em;margin:0 0 24px;font-weight:700}
-    .role{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.34);background:rgba(255,255,255,.13);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);padding:11px 16px;border-radius:13px;font-size:13px;font-weight:700;letter-spacing:.005em}
-    .scroll-hint{position:absolute;z-index:2;right:clamp(24px,5vw,76px);bottom:42px;color:white;display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
-    .scroll-line{height:1px;width:48px;background:rgba(255,255,255,.8)}
-    .content{position:relative;z-index:2;margin-top:-76px;padding:0 clamp(16px,5vw,72px) 70px}
-    .glass-panel{
-      max-width:1240px;margin:0 auto;border:1px solid rgba(255,255,255,.86);
-      border-radius:32px;background:var(--glass);backdrop-filter:blur(34px) saturate(155%);
-      -webkit-backdrop-filter:blur(28px) saturate(145%);box-shadow:var(--shadow);
-      padding:clamp(24px,5vw,62px);position:relative;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.95);
-    }
-    .glass-panel::before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,white,transparent)}
-    .intro{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;padding-bottom:38px;border-bottom:1px solid var(--line)}
-    .section-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-weight:800;margin:0 0 12px}
-    h2{font-size:clamp(28px,4vw,46px);letter-spacing:-.055em;line-height:1.08;margin:0;font-weight:600}
-    .intro-note{max-width:260px;color:var(--muted);font-size:13px;line-height:1.7}
-    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;padding:40px 0 46px}
-    h3{font-size:17px;letter-spacing:-.03em;margin:0 0 20px}
-    .contact-list{display:grid;gap:10px}
-    .contact-item{display:flex;align-items:center;gap:15px;padding:14px 15px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.54);transition:transform .22s,border-color .22s,background .22s;box-shadow:0 5px 18px rgba(33,75,75,.035)}
-    .contact-item:hover{transform:translateY(-2px);border-color:rgba(22,134,109,.32);background:rgba(255,255,255,.82)}
-    .contact-icon{width:39px;height:39px;flex:0 0 39px;border-radius:13px;background:linear-gradient(145deg,rgba(22,134,109,.13),rgba(54,125,165,.13));display:grid;place-items:center;color:var(--green-dark)}
-    .contact-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-    .contact-label{display:block;color:var(--muted);font-size:11px;margin-bottom:3px}
-    .contact-value{font-size:14px;font-weight:700;overflow-wrap:anywhere}
-    .arrow{margin-left:auto;color:var(--green);font-size:18px}
-    .address-list{display:grid;gap:13px}
-    .address-card{padding:19px;border-radius:18px;background:rgba(255,255,255,.48);border:1px solid var(--line);transition:.22s}
-    .address-card:hover{background:rgba(255,255,255,.82);transform:translateY(-2px)}
-    .address-top{display:flex;align-items:center;gap:10px;margin-bottom:9px}
-    .address-pin{width:32px;height:32px;display:grid;place-items:center;border-radius:11px;background:#e2f1eb;color:var(--green-dark)}
-    .address-title{font-size:13px;font-weight:800}
-    .address-text{font-size:13px;line-height:1.65;color:#43575b;padding-left:42px}
-    .map-link{display:inline-flex;margin:10px 0 0 42px;color:var(--green-dark);font-size:11px;font-weight:800;letter-spacing:.02em}
-    .gallery{max-width:1240px;margin:72px auto 0;padding:clamp(24px,4vw,44px);border-radius:28px;background:var(--paper);position:relative;isolation:isolate}
-    .gallery-head{display:flex;justify-content:space-between;align-items:end;margin:0 0 25px;padding:0 5px}
-    .gallery-sub{color:var(--muted);font-size:12px}
-    .gallery-grid{display:grid;grid-template-columns:1.1fr .9fr 1fr;grid-auto-rows:230px;gap:14px}
-    .gallery-item{border:0;padding:0;position:relative;overflow:hidden;border-radius:22px;background:#dbe8e2;cursor:zoom-in;min-width:0;box-shadow:0 10px 28px rgba(20,62,61,.08)}
-    .gallery-item:nth-child(1){grid-row:span 2}
-    .gallery-item:nth-child(4){grid-column:span 2}
-    .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
-    .gallery-item:hover img{transform:scale(1.055)}
-    .gallery-item::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(9,35,31,.25));opacity:0;transition:.3s}
-    .gallery-item:hover::after{opacity:1}
-    .footer{max-width:1240px;margin:54px auto 0;padding:24px 5px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}
-    .footer strong{color:var(--ink);letter-spacing:.1em}
-    .lightbox{position:fixed;inset:0;background:rgba(7,20,22,.88);z-index:10;display:none;align-items:center;justify-content:center;padding:24px}
-    .lightbox.open{display:flex}
-    .lightbox img{max-width:min(1100px,94vw);max-height:88vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 80px #0006}
-    .lightbox-close{position:absolute;right:25px;top:20px;border:1px solid #ffffff66;background:#ffffff18;color:white;border-radius:50%;width:44px;height:44px;font-size:25px;cursor:pointer}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-    .reveal.visible{opacity:1;transform:none}
-    @media(max-width:760px){
-      .hero{min-height:560px}.hero-photo{object-position:50% 22%}
-      .topbar{padding:19px 20px}.brand-word{font-size:12px}.brand-caption{font-size:9px}.top-actions{gap:6px}.lang-switch{padding:9px 10px;font-size:9px}.top-link{padding:9px 12px;font-size:10px;border-radius:12px}
-      .hero-copy{left:22px;bottom:125px}.eyebrow{font-size:10px;margin-bottom:13px}
-      h1{font-size:clamp(48px,12vw,76px);max-width:600px}.role{font-size:12px;padding:10px 13px}
-      .scroll-hint{right:22px;bottom:34px;font-size:9px}
-      .content{margin-top:-65px;padding:0 12px 45px}
-      .glass-panel{border-radius:24px;padding:25px 19px}
-      .intro{display:block;padding-bottom:25px}.intro-note{margin-top:13px;font-size:12px}
-      .contact-grid{grid-template-columns:1fr;gap:34px;padding:28px 0 12px}
-      .contact-item{padding:12px}.contact-value{font-size:13px}
-      .gallery{margin-top:48px;padding:25px 16px 18px;border-radius:23px;background:var(--paper);isolation:isolate}.gallery-head{display:block;margin-bottom:20px}.gallery-sub{margin-top:9px}
-      .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px;gap:9px}
-      .gallery-item:nth-child(1){grid-row:span 2}.gallery-item:nth-child(4){grid-column:span 2}
-      .footer{margin-top:38px;flex-direction:column}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10251f">
+<meta name="description" content="Discover Gorizont, a children's health camp in Klin, Moscow Region, Russia. We look forward to welcoming international guests.">
+<title>Welcome to Gorizont — Children's Camp in Russia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10251f;--paper:#f4f3ed;--green:#b8e05c;--muted:#6b756f;--line:rgba(16,37,31,.14);--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.hero{min-height: min(900px,100svh);height:900px;max-height:1000px;position:relative;overflow:hidden;background:#1b302b;color:white;border-radius:0 0 34px 34px}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,17,.24) 0%,rgba(8,20,17,.03) 33%,rgba(8,20,17,.24) 58%,rgba(8,20,17,.88) 100%),linear-gradient(90deg,rgba(8,20,17,.22),transparent 75%),url("assets/hero.webp") center 38%/cover no-repeat;transform:scale(1.015)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,17,.25),transparent 20%);pointer-events:none}
+.nav{position:absolute;z-index:2;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:28px clamp(22px,5vw,76px)}
+.brand{font-family:Manrope,sans-serif;font-size:13px;font-weight:800;letter-spacing:.16em;display:flex;align-items:center;gap:12px}
+.brand-mark{width:34px;height:34px;border:1px solid rgba(255,255,255,.68);border-radius:50%;display:grid;place-items:center;font-size:11px;letter-spacing:0}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-note{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.lang{border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.1);color:#fff;border-radius:99px;padding:10px 14px;font-size:10px;letter-spacing:.12em;cursor:pointer;backdrop-filter:blur(12px)}
+.hero-content{position:absolute;z-index:1;left:clamp(24px,9vw,140px);right:clamp(24px,9vw,140px);bottom:clamp(58px,10vh,110px);max-width:900px}
+.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#d7edb0;font-weight:700;margin-bottom:22px}
+h1,h2,h3,p{margin-top:0}
+h1{font:600 clamp(52px,8.8vw,116px)/.94 Manrope,sans-serif;letter-spacing:-.075em;max-width:900px;margin-bottom:24px}
+.hero-copy{font-size:clamp(15px,1.55vw,19px);line-height:1.55;color:rgba(255,255,255,.86);max-width:480px;margin-bottom:30px}
+.hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:20px;border-radius:99px;padding:15px 21px;font-size:12px;font-weight:700;transition:.25s}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:var(--green);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:white;background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.hero-index{position:absolute;z-index:1;right:clamp(24px,5vw,76px);bottom:38px;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.65)}
+main{overflow:hidden}
+.section{padding:clamp(76px,11vw,150px) clamp(22px,8vw,120px)}
+.section-top{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:46px}
+.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#6f8d50;font-weight:700;margin-bottom:18px}
+h2{font:600 clamp(38px,5.4vw,70px)/1.02 Manrope,sans-serif;letter-spacing:-.065em;margin-bottom:0}
+.lead{font-size:15px;line-height:1.7;color:var(--muted);max-width:350px;margin:0}
+.intro-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,8vw,120px);align-items:center}
+.intro-photo{position:relative;min-height:560px;border-radius:24px;overflow:hidden;background:#d4d8c9}
+.intro-photo img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0}
+.photo-caption{position:absolute;left:20px;bottom:20px;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-radius:99px;padding:11px 15px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.intro-text h2{margin-bottom:25px}
+.intro-text p{font-size:16px;line-height:1.8;color:#5d6962;max-width:480px}
+.signature{margin-top:34px;font:600 12px Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.cards-section{background:#e9ebe2;border-radius:34px}
+.cards-head{max-width:650px;margin-bottom:48px}
+.cards-head .lead{margin-top:22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{position:relative;min-height:430px;border-radius:22px;overflow:hidden;background:#263c33;color:white}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.045)}
+.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(6,19,14,.78) 100%)}
+.card-content{position:absolute;z-index:1;left:24px;right:24px;bottom:26px}
+.card-number{font-size:10px;letter-spacing:.18em;color:#d9edae;margin-bottom:12px}
+.card h3{font:600 27px/1.05 Manrope,sans-serif;letter-spacing:-.04em;margin-bottom:8px}
+.card p{font-size:13px;line-height:1.5;color:rgba(255,255,255,.8);max-width:300px;margin-bottom:0}
+.gallery-strip{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}
+.gallery-strip img{width:100%;height:340px;object-fit:cover;border-radius:22px}
+.invite{padding-top:clamp(90px,12vw,160px);padding-bottom:clamp(90px,12vw,160px)}
+.invite-panel{background:var(--ink);color:white;border-radius:30px;padding:clamp(32px,7vw,90px);display:grid;grid-template-columns:1fr .75fr;gap:50px;align-items:center;position:relative;overflow:hidden}
+.invite-panel:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(184,224,92,.22);border-radius:50%;right:-100px;top:-180px;box-shadow:0 0 0 55px rgba(184,224,92,.035),0 0 0 110px rgba(184,224,92,.025)}
+.invite-panel h2{font-size:clamp(42px,5.6vw,72px);max-width:640px;margin-bottom:22px}
+.invite-panel p{font-size:15px;line-height:1.75;color:rgba(255,255,255,.7);max-width:520px;margin-bottom:0}
+.invite-aside{position:relative;z-index:1;border-left:1px solid rgba(255,255,255,.2);padding-left:32px}
+.invite-aside .kicker{color:#c9e995}
+.invite-aside strong{display:block;font:600 19px Manrope,sans-serif;margin-bottom:10px}
+.invite-aside span{display:block;color:rgba(255,255,255,.66);font-size:13px;line-height:1.65}
+.contacts{padding-top:0}
+.contact-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(35px,8vw,110px);align-items:center}
+.director{display:flex;align-items:center;gap:20px}
+.director img{width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:center 20%}
+.director small{display:block;color:#768079;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:7px}
+.director strong{font:600 17px Manrope,sans-serif}
+.contact-info h2{font-size:clamp(36px,4vw,52px);margin-bottom:26px}
+.contact-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-link{border-top:1px solid var(--line);padding:17px 0;display:flex;flex-direction:column;gap:7px;min-width:0}
+.contact-link span{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#778179}
+.contact-link strong{font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.contact-link:hover strong{color:#638a32}
+.footer{display:flex;justify-content:space-between;gap:20px;padding:25px clamp(22px,8vw,120px) 34px;color:#778179;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.footer b{color:var(--ink);letter-spacing:.14em}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:760px){
+ .hero{height: min(850px,100svh);min-height:690px;border-radius:0 0 22px 22px}
+ .hero:before{background:linear-gradient(180deg,rgba(8,20,17,.18) 0%,rgba(8,20,17,.03) 30%,rgba(8,20,17,.25) 54%,rgba(8,20,17,.88) 100%),url("assets/hero.webp") 51% center/cover no-repeat}
+ .nav{padding:19px 20px}.brand{font-size:11px;gap:9px}.brand-mark{width:30px;height:30px}.nav-note{display:none}.lang{padding:9px 12px}
+ .hero-content{left:23px;right:23px;bottom:72px}.eyebrow{font-size:9px;margin-bottom:17px}h1{font-size:clamp(52px,14vw,78px);margin-bottom:18px}.hero-copy{font-size:14px;max-width:330px;margin-bottom:23px}.btn{padding:14px 17px;font-size:11px}.hero-index{right:22px;bottom:22px}
+ .section{padding:76px 21px}.section-top{display:block;margin-bottom:30px}.section-top .lead{margin-top:20px}.intro-grid{grid-template-columns:1fr;gap:28px}.intro-photo{min-height:390px;height:105vw;max-height:530px;order:2}.intro-text{order:1}.intro-text p{font-size:14px}
+ .cards-section{border-radius:22px}.cards{grid-template-columns:1fr;gap:12px}.card{min-height:420px}.cards-head{margin-bottom:30px}.gallery-strip{grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}.gallery-strip img{height:190px;border-radius:14px}
+ .invite{padding-top:75px;padding-bottom:75px}.invite-panel{grid-template-columns:1fr;gap:30px;border-radius:22px;padding:30px 24px}.invite-panel h2{font-size:43px}.invite-panel p{font-size:14px}.invite-aside{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:23px 0 0}.contact-layout{grid-template-columns:1fr;gap:32px}.director img{width:82px;height:82px}.contact-list{grid-template-columns:1fr 1fr;gap:8px}.contact-link strong{font-size:12px}.contact-link{padding:14px 0}.footer{padding:22px;flex-direction:column;gap:9px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
-  <header class="hero">
-    <img class="hero-photo" src="assets/portrait.webp" alt="Дмитрий Александрович Горячев">
-    <div class="topbar">
-      <a class="brand" href="#top" aria-label="МАУ Горизонт">
-        <span class="brand-word" data-i18n="brandName">ГОРИЗОНТ<span class="brand-dot">.</span></span><span class="brand-divider"></span><span class="brand-caption">КЛИН</span>
-      </a>
-      <div class="top-actions"><button class="lang-switch" id="langSwitch" type="button">EN</button><a class="top-link" href="#contacts" data-i18n="navContacts">Контакты <span aria-hidden="true">↗</span></a></div>
+<header class="hero" id="top">
+  <nav class="nav">
+    <a class="brand" href="#top"><span class="brand-mark">G</span><span>GORIZONT</span></a>
+    <div class="nav-right"><span class="nav-note" data-i18n="navPlace">KLIN · MOSCOW REGION · RUSSIA</span><button class="lang" id="languageToggle" type="button" aria-label="Switch to Russian">RU&nbsp; / &nbsp;EN</button></div>
+  </nav>
+  <div class="hero-content">
+    <div class="eyebrow" data-i18n="heroEyebrow">A CHILDREN’S HEALTH CAMP IN RUSSIA</div>
+    <h1 data-i18n="heroTitle">Welcome to<br>Gorizont.</h1>
+    <p class="hero-copy" data-i18n="heroCopy">A place for new friends, bright discoveries and unforgettable summer days. We would love to welcome you to our camp.</p>
+    <div class="hero-actions">
+      <a class="btn btn-light" href="#welcome" data-i18n="heroButton">Discover the camp <span>↘</span></a>
+      <a class="btn btn-ghost" href="#visit" data-i18n="heroContact">Plan your visit</a>
     </div>
-    <div class="hero-copy" id="top">
-      <div class="eyebrow" data-i18n="eyebrow">МАУ «Горизонт» · Клин</div>
-      <h1 data-i18n="heroName">Дмитрий<br>Горячев</h1>
-      <div class="role" data-i18n="role">Директор МАУ «Горизонт»</div>
-    </div>
-    <div class="scroll-hint"><span class="scroll-line"></span data-i18n="scroll">Листайте вниз</div>
-  </header>
-
-  <main class="content">
-    <section class="glass-panel reveal" id="contacts">
-      <div class="intro">
-        <div>
-          <p class="section-kicker" data-i18n="contactKicker">Контакты и информация</p>
-          <h2 data-i18n="contactHeading">Всегда на связи</h2>
-        </div>
-        <div class="intro-note"><span data-i18n="introName">Дмитрий Александрович Горячев</span><br><span data-i18n="introRole" data-i18n="introRole">Директор муниципального автономного учреждения «Горизонт».</span></div>
-      </div>
-
-      <div class="contact-grid">
-        <section>
-          <h3 data-i18n="getInTouch">Связаться</h3>
-          <div class="contact-list">
-            <a class="contact-item" href="tel:+74962475823">
-              <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a16 16 0 0 0 6 6l2-3 5 2v4c0 1-1 2-2 2C10 20 4 14 3 5c0-1 1-2 2-2Z"/></svg></span>
-              <span><span class="contact-label" data-i18n="officePhone">Рабочий телефон</span><span class="contact-value">+7 (49624) 7-58-23</span></span><span class="arrow">↗</span>
-            </a>
-            <a class="contact-item" href="tel:+79169939909">
-              <span class="contact-icon"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2"/><path d="M10 18.5h4"/></svg></span>
-              <span><span class="contact-label" data-i18n="mobilePhone">Мобильный телефон</span><span class="contact-value">+7 (916) 993-99-09</span></span><span class="arrow">↗</span>
-            </a>
-            <a class="contact-item" href="https://t.me/DmitriGoriachev" target="_blank" rel="noopener">
-              <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="m21 3-7 18-4-8-8-4 19-6Z"/><path d="m10 13 5-5"/></svg></span>
-              <span><span class="contact-label" data-i18n="telegramDirector">Telegram · директор</span><span class="contact-value">@DmitriGoriachev</span></span><span class="arrow">↗</span>
-            </a>
-            <a class="contact-item" href="https://t.me/GorizontOfi" target="_blank" rel="noopener">
-              <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="m21 3-7 18-4-8-8-4 19-6Z"/><path d="m10 13 5-5"/></svg></span>
-              <span><span class="contact-label" data-i18n="telegramCamp">Telegram · МАУ «Горизонт»</span><span class="contact-value">@GorizontOfi</span></span><span class="arrow">↗</span>
-            </a>
-            <a class="contact-item" href="mailto:DGoryachev@bk.ru">
-              <span class="contact-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <span><span class="contact-label" data-i18n="email">Электронная почта</span><span class="contact-value">DGoryachev@bk.ru</span></span><span class="arrow">↗</span>
-            </a>
-            <a class="contact-item" href="https://klin-gorizont.ru" target="_blank" rel="noopener">
-              <span class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
-              <span><span class="contact-label" data-i18n="officialWebsite">Официальный сайт</span><span class="contact-value">klin-gorizont.ru</span></span><span class="arrow">↗</span>
-            </a>
-          </div>
-        </section>
-
-        <section>
-          <h3 data-i18n="addresses">Адреса</h3>
-          <div class="address-list">
-            <article class="address-card">
-              <div class="address-top"><span class="address-pin">⌖</span><span class="address-title" data-i18n="adminAddress">Административный адрес</span></div>
-              <div class="address-text" data-i18n="adminAddressText">Московская область, г. Клин, Советская площадь, д. 21</div>
-              <a class="map-link" data-i18n="openMap" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Московская%20область%2C%20Клин%2C%20Советская%20площадь%2C%2021">Открыть на карте ↗</a>
-            </article>
-            <article class="address-card">
-              <div class="address-top"><span class="address-pin">⌖</span><span class="address-title" data-i18n="mainSite">Основная территория МАУ «Горизонт»</span></div>
-              <div class="address-text" data-i18n="mainSiteAddress">Московская область, г.о. Клин, д. Николаевка</div>
-              <a class="map-link" data-i18n="openMap" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Московская%20область%2C%20г.о.%20Клин%2C%20деревня%20Николаевка">Открыть на карте ↗</a>
-            </article>
-            <article class="address-card">
-              <div class="address-top"><span class="address-pin">⌖</span><span class="address-title" data-i18n="sportsComplex">Спортивно-оздоровительный комплекс</span></div>
-              <div class="address-text" data-i18n="sportsAddress">Московская область, г.о. Клин, с. Спас-Заулок, ул. Зелёная, д. 1</div>
-              <a class="map-link" data-i18n="openMap" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Московская%20область%2C%20Клинский%20район%2C%20Спас-Заулок%2C%20Зелёная%201">Открыть на карте ↗</a>
-            </article>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="gallery reveal" id="gallery">
-      <div class="gallery-head">
-        <div><p class="section-kicker" data-i18n="galleryKicker">Жизнь «Горизонта»</p><h2 data-i18n="galleryHeading">Моменты, которые<br>остаются с нами</h2></div>
-        <div class="gallery-sub" data-i18n="gallerySub">Фотографии лагеря · 2026</div>
-      </div>
-      <div class="gallery-grid">
-        <button class="gallery-item" aria-label="Открыть фотографию 1"><img src="assets/camp-01.webp" alt="Участницы смены в фирменной одежде лагеря" loading="lazy"></button>
-        <button class="gallery-item" aria-label="Открыть фотографию 2"><img src="assets/camp-02.webp" alt="Объятия участников лагеря" loading="lazy"></button>
-        <button class="gallery-item" aria-label="Открыть фотографию 3"><img src="assets/camp-03.webp" alt="Дети смотрят в камеру на фоне неба" loading="lazy"></button>
-        <button class="gallery-item" aria-label="Открыть фотографию 4"><img src="assets/camp-04.webp" alt="Вечер у костра" loading="lazy"></button>
-        <button class="gallery-item" aria-label="Открыть фотографию 5"><img src="assets/camp-05.webp" alt="Участницы лагеря на территории Горизонта" loading="lazy"></button>
-        <button class="gallery-item" aria-label="Открыть фотографию 6"><img src="assets/camp-06.webp" alt="Отряд на лесной поляне" loading="lazy"></button>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div><strong>МАУ «ГОРИЗОНТ»</strong><br data-i18n="footerName">Горячев Дмитрий Александрович</div>
-      <div><span data-i18n="footerOfficial">Официальный сайт учреждения</span> · <a href="https://klin-gorizont.ru" target="_blank" rel="noopener">klin-gorizont.ru ↗</a></div>
-    </footer>
-  </main>
-
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
-    <button class="lightbox-close" aria-label="Закрыть">&times;</button>
-    <img src="" alt="">
   </div>
-  <script>
+  <div class="hero-index">01 — 04 &nbsp; / &nbsp; GORIZONT CAMP</div>
+</header>
 
-    const translations = {
-      ru: {
-        brandName:"ГОРИЗОНТ<span class=\"brand-dot\">.</span>", heroName:"Дмитрий<br>Горячев", navContacts:"Контакты", eyebrow:"МАУ «Горизонт» · Клин", role:"Директор МАУ «Горизонт»", scroll:"Листайте вниз",
-        contactKicker:"Контакты и информация", contactHeading:"Всегда на связи", introName:"Дмитрий Александрович Горячев",
-        introRole:"Директор муниципального автономного учреждения «Горизонт».", getInTouch:"Связаться",
-        officePhone:"Рабочий телефон", mobilePhone:"Мобильный телефон", telegramDirector:"Telegram · директор",
-        telegramCamp:"Telegram · МАУ «Горизонт»", email:"Электронная почта", officialWebsite:"Официальный сайт",
-        addresses:"Адреса", adminAddress:"Административный адрес",
-        adminAddressText:"Московская область, г. Клин, Советская площадь, д. 21",
-        mainSite:"Основная территория МАУ «Горизонт»", mainSiteAddress:"Московская область, г.о. Клин, д. Николаевка",
-        sportsComplex:"Спортивно-оздоровительный комплекс",
-        sportsAddress:"Московская область, г.о. Клин, с. Спас-Заулок, ул. Зелёная, д. 1",
-        openMap:"Открыть на карте ↗", galleryKicker:"Жизнь «Горизонта»",
-        galleryHeading:"Моменты, которые<br>остаются с нами", gallerySub:"Фотографии лагеря · 2026",
-        footerName:"Горячев Дмитрий Александрович", footerOfficial:"Официальный сайт учреждения"
-      },
-      en: {
-        brandName:"GORIZONT<span class=\"brand-dot\">.</span>", heroName:"Dmitry<br>Goryachev", navContacts:"Contacts", eyebrow:"MAU “Gorizont” · Klin", role:"Director of MAU “Gorizont”", scroll:"Scroll to explore",
-        contactKicker:"CONTACTS & INFORMATION", contactHeading:"Get in touch", introName:"Dmitry Alexandrovich Goryachev",
-        introRole:"Director of the Municipal Autonomous Institution “Gorizont”.", getInTouch:"Contact",
-        officePhone:"Office phone", mobilePhone:"Mobile phone", telegramDirector:"Telegram · Director",
-        telegramCamp:"Telegram · MAU “Gorizont”", email:"Email", officialWebsite:"Official website",
-        addresses:"Locations", adminAddress:"Administrative office",
-        adminAddressText:"21 Sovetskaya Square, Klin, Moscow Region, Russia",
-        mainSite:"Main MAU “Gorizont” camp site", mainSiteAddress:"Nikolaevka village, Klin Urban District, Moscow Region, Russia",
-        sportsComplex:"Sports and Recreation Complex",
-        sportsAddress:"1 Zelyonaya Street, Spas-Zaulok, Klin Urban District, Moscow Region, Russia",
-        openMap:"Open map ↗", galleryKicker:"LIFE AT “GORIZONT”",
-        galleryHeading:"Moments that<br>stay with us", gallerySub:"Camp photographs · 2026",
-        footerName:"Dmitry Alexandrovich Goryachev", footerOfficial:"Official institution website"
-      }
-    };
-    let currentLanguage = "ru";
-    const languageButton = document.getElementById("langSwitch");
-    function setLanguage(language) {
-      currentLanguage = language;
-      document.documentElement.lang = language;
-      document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.dataset.i18n;
-        if (translations[language][key]) element.innerHTML = translations[language][key];
-      });
-      languageButton.textContent = language === "ru" ? "EN" : "RU";
-      languageButton.setAttribute("aria-label", language === "ru" ? "Switch to English" : "Переключить на русский");
-    }
-    languageButton.addEventListener("click", () => setLanguage(currentLanguage === "ru" ? "en" : "ru"));
+<main>
+<section class="section" id="welcome">
+  <div class="intro-grid">
+    <div class="intro-photo reveal">
+      <img src="assets/camp-group.webp" alt="Children and counselors at Gorizont camp">
+      <span class="photo-caption" data-i18n="photoCaption">Together is the best place to be</span>
+    </div>
+    <div class="intro-text reveal">
+      <div class="kicker" data-i18n="aboutKicker">A WARM WELCOME</div>
+      <h2 data-i18n="aboutTitle">A little world full of possibility.</h2>
+      <p data-i18n="aboutCopy">Gorizont is a children's health and recreation camp in Klin, Moscow Region. Surrounded by nature, children spend their days making friends, exploring new interests, playing sports and creating memories together.</p>
+      <p data-i18n="aboutCopy2">Our team creates a welcoming atmosphere where every child can feel included, discover something new and simply enjoy being a child.</p>
+      <div class="signature" data-i18n="aboutSign">We can’t wait to meet you.</div>
+    </div>
+  </div>
+</section>
 
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {threshold: .08});
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+<section class="section cards-section">
+  <div class="cards-head reveal">
+    <div class="kicker" data-i18n="lifeKicker">LIFE AT GORIZONT</div>
+    <h2 data-i18n="lifeTitle">Every day brings<br>something new.</h2>
+    <p class="lead" data-i18n="lifeLead">From creative workshops to outdoor adventures, there is always something to try, learn and enjoy.</p>
+  </div>
+  <div class="cards">
+    <article class="card reveal">
+      <img src="assets/creative.webp" alt="Children taking part in a creative workshop" loading="lazy">
+      <div class="card-content"><div class="card-number">01 / CREATE</div><h3 data-i18n="creativeTitle">Create & explore</h3><p data-i18n="creativeCopy">Art, hands-on workshops and space to let imagination lead.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="assets/dance.webp" alt="Campers dancing together outdoors" loading="lazy">
+      <div class="card-content"><div class="card-number">02 / CONNECT</div><h3 data-i18n="friendsTitle">Friends & memories</h3><p data-i18n="friendsCopy">Shared moments, new friendships and a true team spirit.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="assets/sports.webp" alt="Children playing football at camp" loading="lazy">
+      <div class="card-content"><div class="card-number">03 / MOVE</div><h3 data-i18n="sportsTitle">Play & be active</h3><p data-i18n="sportsCopy">Games, sports and outdoor activities for energetic days.</p></div>
+    </article>
+  </div>
+  <div class="gallery-strip reveal">
+    <img src="assets/community.webp" alt="Campers enjoying a shared event" loading="lazy">
+    <img src="assets/friends.webp" alt="Friends at Gorizont camp" loading="lazy">
+  </div>
+</section>
 
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = lightbox.querySelector('img');
-    document.querySelectorAll('.gallery-item').forEach(button => {
-      button.addEventListener('click', () => {
-        const image = button.querySelector('img');
-        lightboxImage.src = image.src;
-        lightboxImage.alt = image.alt;
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    function closeLightbox() {
-      lightbox.classList.remove('open');
-      document.body.style.overflow = '';
-      lightboxImage.src = '';
-    }
-    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeLightbox(); });
-  </script>
+<section class="section invite" id="visit">
+  <div class="invite-panel reveal">
+    <div>
+      <div class="kicker" data-i18n="inviteKicker">YOU ARE INVITED</div>
+      <h2 data-i18n="inviteTitle">Come and experience Gorizont.</h2>
+      <p data-i18n="inviteCopy">We would be happy to welcome international guests and introduce you to our camp, our activities and the people who make Gorizont special.</p>
+    </div>
+    <div class="invite-aside">
+      <div class="kicker" data-i18n="planKicker">PLANNING A VISIT?</div>
+      <strong data-i18n="planTitle">Please contact us in advance.</strong>
+      <span data-i18n="planCopy">To arrange your visit, please call or email our Director, Dmitry Alexandrovich Goryachev, ahead of time. We will be glad to discuss a suitable date and help you plan your arrival.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section contacts" id="contacts">
+  <div class="contact-layout">
+    <div class="director reveal">
+      <img src="assets/director.webp" alt="Dmitry Alexandrovich Goryachev, Director of Gorizont" loading="lazy">
+      <div><small data-i18n="directorLabel">CAMP DIRECTOR</small><strong>Dmitry Alexandrovich<br>Goryachev</strong></div>
+    </div>
+    <div class="contact-info reveal">
+      <div class="kicker" data-i18n="contactKicker">LET’S STAY IN TOUCH</div>
+      <h2 data-i18n="contactTitle">We’ll be glad to hear from you.</h2>
+      <div class="contact-list">
+        <a class="contact-link" href="tel:+79169939909"><span data-i18n="mobileLabel">Mobile phone</span><strong>+7 (916) 993-99-09 ↗</strong></a>
+        <a class="contact-link" href="tel:+74962475823"><span data-i18n="officeLabel">Office phone</span><strong>+7 (49624) 7-58-23 ↗</strong></a>
+        <a class="contact-link" href="mailto:DGoryachev@bk.ru"><span data-i18n="emailLabel">Email</span><strong>DGoryachev@bk.ru ↗</strong></a>
+        <a class="contact-link" href="https://klin-gorizont.ru" target="_blank" rel="noopener"><span data-i18n="websiteLabel">Official website</span><strong>klin-gorizont.ru ↗</strong></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer"><b>GORIZONT · KLIN · RUSSIA</b><span data-i18n="footerText">A place to grow, explore and belong.</span></footer>
+
+<script>
+const copy = {
+en:{
+navPlace:"KLIN · MOSCOW REGION · RUSSIA",heroEyebrow:"A CHILDREN’S HEALTH CAMP IN RUSSIA",
+heroTitle:"Welcome to<br>Gorizont.",heroCopy:"A place for new friends, bright discoveries and unforgettable summer days. We would love to welcome you to our camp.",
+heroButton:"Discover the camp <span>↘</span>",heroContact:"Plan your visit",photoCaption:"Together is the best place to be",
+aboutKicker:"A WARM WELCOME",aboutTitle:"A little world full of possibility.",
+aboutCopy:"Gorizont is a children's health and recreation camp in Klin, Moscow Region. Surrounded by nature, children spend their days making friends, exploring new interests, playing sports and creating memories together.",
+aboutCopy2:"Our team creates a welcoming atmosphere where every child can feel included, discover something new and simply enjoy being a child.",
+aboutSign:"We can’t wait to meet you.",lifeKicker:"LIFE AT GORIZONT",lifeTitle:"Every day brings<br>something new.",
+lifeLead:"From creative workshops to outdoor adventures, there is always something to try, learn and enjoy.",
+creativeTitle:"Create & explore",creativeCopy:"Art, hands-on workshops and space to let imagination lead.",
+friendsTitle:"Friends & memories",friendsCopy:"Shared moments, new friendships and a true team spirit.",
+sportsTitle:"Play & be active",sportsCopy:"Games, sports and outdoor activities for energetic days.",
+inviteKicker:"YOU ARE INVITED",inviteTitle:"Come and experience Gorizont.",
+inviteCopy:"We would be happy to welcome international guests and introduce you to our camp, our activities and the people who make Gorizont special.",
+planKicker:"PLANNING A VISIT?",planTitle:"Please contact us in advance.",
+planCopy:"To arrange your visit, please call or email our Director, Dmitry Alexandrovich Goryachev, ahead of time. We will be glad to discuss a suitable date and help you plan your arrival.",
+directorLabel:"CAMP DIRECTOR",contactKicker:"LET’S STAY IN TOUCH",contactTitle:"We’ll be glad to hear from you.",
+mobileLabel:"Mobile phone",officeLabel:"Office phone",emailLabel:"Email",websiteLabel:"Official website",footerText:"A place to grow, explore and belong."
+},
+ru:{
+navPlace:"КЛИН · МОСКОВСКАЯ ОБЛАСТЬ · РОССИЯ",heroEyebrow:"ДЕТСКИЙ ОЗДОРОВИТЕЛЬНЫЙ ЛАГЕРЬ В РОССИИ",
+heroTitle:"Добро пожаловать<br>в «Горизонт».",heroCopy:"Место новых друзей, ярких открытий и незабываемых летних дней. Будем рады видеть вас в нашем лагере.",
+heroButton:"О лагере <span>↘</span>",heroContact:"Запланировать визит",photoCaption:"Вместе — лучше всего",
+aboutKicker:"МЫ ВАМ РАДЫ",aboutTitle:"Маленький мир больших возможностей.",
+aboutCopy:"«Горизонт» — детский оздоровительный лагерь в Клину Московской области. Среди природы ребята находят новых друзей, открывают интересы, занимаются спортом и создают общие воспоминания.",
+aboutCopy2:"Наша команда создаёт атмосферу, в которой каждый ребёнок чувствует себя частью коллектива, пробует новое и просто наслаждается детством.",
+aboutSign:"Будем рады знакомству!",lifeKicker:"ЖИЗНЬ В «ГОРИЗОНТЕ»",lifeTitle:"Каждый день —<br>что-то новое.",
+lifeLead:"Творческие мастерские, активный отдых и приключения на свежем воздухе — у нас всегда есть чему научиться и чему порадоваться.",
+creativeTitle:"Творчество и открытия",creativeCopy:"Рисование, мастер-классы и простор для воображения.",
+friendsTitle:"Друзья и воспоминания",friendsCopy:"Общие моменты, новые знакомства и настоящий командный дух.",
+sportsTitle:"Игры и движение",sportsCopy:"Спорт, игры и активности для энергичных дней.",
+inviteKicker:"МЫ ПРИГЛАШАЕМ ВАС",inviteTitle:"Приезжайте в «Горизонт».",
+inviteCopy:"Мы будем рады принять иностранных гостей, познакомить вас с лагерем, нашими занятиями и людьми, благодаря которым «Горизонт» становится особенным местом.",
+planKicker:"ПЛАНИРУЕТЕ ВИЗИТ?",planTitle:"Пожалуйста, свяжитесь с нами заранее.",
+planCopy:"Чтобы договориться о посещении лагеря, просим вас заблаговременно позвонить или написать директору — Дмитрию Александровичу Горячеву. Мы обсудим удобную дату и поможем спланировать ваш приезд.",
+directorLabel:"ДИРЕКТОР ЛАГЕРЯ",contactKicker:"БУДЕМ НА СВЯЗИ",contactTitle:"Будем рады вашему сообщению.",
+mobileLabel:"Мобильный телефон",officeLabel:"Рабочий телефон",emailLabel:"Электронная почта",websiteLabel:"Официальный сайт",footerText:"Место, где растут, открывают новое и находят друзей."
+}
+};
+let language="en";
+const toggle=document.getElementById("languageToggle");
+function setLanguage(lang){
+ language=lang;document.documentElement.lang=lang;
+ document.querySelectorAll("[data-i18n]").forEach(el=>{
+  const key=el.dataset.i18n;if(copy[lang][key])el.innerHTML=copy[lang][key];
+ });
+ toggle.innerHTML=lang==="en"?"EN&nbsp; / &nbsp;<u>RU</u>":"<u>RU</u>&nbsp; / &nbsp;EN";
+ toggle.setAttribute("aria-label",lang==="en"?"Switch to Russian":"Переключить на английский");
+}
+toggle.addEventListener("click",()=>setLanguage(language==="en"?"ru":"en"));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+ if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
+}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
