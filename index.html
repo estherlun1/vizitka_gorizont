@@ -3,257 +3,217 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#10251f">
-<meta name="description" content="Discover Gorizont, a children's health camp in Klin, Moscow Region, Russia. We look forward to welcoming international guests.">
-<title>Welcome to Gorizont — Children's Camp in Russia</title>
+<meta name="theme-color" content="#122820">
+<meta name="description" content="You are invited to Gorizont, a children's camp in Klin, Russia. Contact us to arrange your visit.">
+<title>You’re invited to Gorizont — Children's Camp in Russia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#10251f;--paper:#f4f3ed;--green:#b8e05c;--muted:#6b756f;--line:rgba(16,37,31,.14);--white:#fff}
+:root{--ink:#132a22;--green:#c5e68b;--paper:#f3f4ef;--muted:#66736c}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 button{font:inherit}
-.hero{min-height: min(900px,100svh);height:900px;max-height:1000px;position:relative;overflow:hidden;background:#1b302b;color:white;border-radius:0 0 34px 34px}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,17,.24) 0%,rgba(8,20,17,.03) 33%,rgba(8,20,17,.24) 58%,rgba(8,20,17,.88) 100%),linear-gradient(90deg,rgba(8,20,17,.22),transparent 75%),url("assets/hero.webp") center 38%/cover no-repeat;transform:scale(1.015)}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,17,.25),transparent 20%);pointer-events:none}
-.nav{position:absolute;z-index:2;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:28px clamp(22px,5vw,76px)}
-.brand{font-family:Manrope,sans-serif;font-size:13px;font-weight:800;letter-spacing:.16em;display:flex;align-items:center;gap:12px}
-.brand-mark{width:34px;height:34px;border:1px solid rgba(255,255,255,.68);border-radius:50%;display:grid;place-items:center;font-size:11px;letter-spacing:0}
-.nav-right{display:flex;align-items:center;gap:18px}
-.nav-note{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:rgba(255,255,255,.8)}
-.lang{border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.1);color:#fff;border-radius:99px;padding:10px 14px;font-size:10px;letter-spacing:.12em;cursor:pointer;backdrop-filter:blur(12px)}
-.hero-content{position:absolute;z-index:1;left:clamp(24px,9vw,140px);right:clamp(24px,9vw,140px);bottom:clamp(58px,10vh,110px);max-width:900px}
-.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#d7edb0;font-weight:700;margin-bottom:22px}
-h1,h2,h3,p{margin-top:0}
-h1{font:600 clamp(52px,8.8vw,116px)/.94 Manrope,sans-serif;letter-spacing:-.075em;max-width:900px;margin-bottom:24px}
-.hero-copy{font-size:clamp(15px,1.55vw,19px);line-height:1.55;color:rgba(255,255,255,.86);max-width:480px;margin-bottom:30px}
-.hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:20px;border-radius:99px;padding:15px 21px;font-size:12px;font-weight:700;transition:.25s}
-.btn-light{background:#fff;color:var(--ink)}
-.btn-light:hover{background:var(--green);transform:translateY(-2px)}
-.btn-ghost{border:1px solid rgba(255,255,255,.5);color:white;background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}
-.btn-ghost:hover{background:rgba(255,255,255,.2)}
-.hero-index{position:absolute;z-index:1;right:clamp(24px,5vw,76px);bottom:38px;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.65)}
-main{overflow:hidden}
-.section{padding:clamp(76px,11vw,150px) clamp(22px,8vw,120px)}
-.section-top{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:46px}
-.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#6f8d50;font-weight:700;margin-bottom:18px}
-h2{font:600 clamp(38px,5.4vw,70px)/1.02 Manrope,sans-serif;letter-spacing:-.065em;margin-bottom:0}
-.lead{font-size:15px;line-height:1.7;color:var(--muted);max-width:350px;margin:0}
-.intro-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,8vw,120px);align-items:center}
-.intro-photo{position:relative;min-height:560px;border-radius:24px;overflow:hidden;background:#d4d8c9}
-.intro-photo img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0}
-.photo-caption{position:absolute;left:20px;bottom:20px;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-radius:99px;padding:11px 15px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
-.intro-text h2{margin-bottom:25px}
-.intro-text p{font-size:16px;line-height:1.8;color:#5d6962;max-width:480px}
-.signature{margin-top:34px;font:600 12px Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase}
-.cards-section{background:#e9ebe2;border-radius:34px}
-.cards-head{max-width:650px;margin-bottom:48px}
-.cards-head .lead{margin-top:22px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{position:relative;min-height:430px;border-radius:22px;overflow:hidden;background:#263c33;color:white}
-.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-.card:hover img{transform:scale(1.045)}
-.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(6,19,14,.78) 100%)}
-.card-content{position:absolute;z-index:1;left:24px;right:24px;bottom:26px}
-.card-number{font-size:10px;letter-spacing:.18em;color:#d9edae;margin-bottom:12px}
-.card h3{font:600 27px/1.05 Manrope,sans-serif;letter-spacing:-.04em;margin-bottom:8px}
-.card p{font-size:13px;line-height:1.5;color:rgba(255,255,255,.8);max-width:300px;margin-bottom:0}
-.gallery-strip{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}
-.gallery-strip img{width:100%;height:340px;object-fit:cover;border-radius:22px}
-.invite{padding-top:clamp(90px,12vw,160px);padding-bottom:clamp(90px,12vw,160px)}
-.invite-panel{background:var(--ink);color:white;border-radius:30px;padding:clamp(32px,7vw,90px);display:grid;grid-template-columns:1fr .75fr;gap:50px;align-items:center;position:relative;overflow:hidden}
-.invite-panel:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(184,224,92,.22);border-radius:50%;right:-100px;top:-180px;box-shadow:0 0 0 55px rgba(184,224,92,.035),0 0 0 110px rgba(184,224,92,.025)}
-.invite-panel h2{font-size:clamp(42px,5.6vw,72px);max-width:640px;margin-bottom:22px}
-.invite-panel p{font-size:15px;line-height:1.75;color:rgba(255,255,255,.7);max-width:520px;margin-bottom:0}
-.invite-aside{position:relative;z-index:1;border-left:1px solid rgba(255,255,255,.2);padding-left:32px}
-.invite-aside .kicker{color:#c9e995}
-.invite-aside strong{display:block;font:600 19px Manrope,sans-serif;margin-bottom:10px}
-.invite-aside span{display:block;color:rgba(255,255,255,.66);font-size:13px;line-height:1.65}
-.contacts{padding-top:0}
-.contact-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(35px,8vw,110px);align-items:center}
-.director{display:flex;align-items:center;gap:20px}
-.director img{width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:center 20%}
-.director small{display:block;color:#768079;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:7px}
-.director strong{font:600 17px Manrope,sans-serif}
-.contact-info h2{font-size:clamp(36px,4vw,52px);margin-bottom:26px}
-.contact-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.contact-link{border-top:1px solid var(--line);padding:17px 0;display:flex;flex-direction:column;gap:7px;min-width:0}
-.contact-link span{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#778179}
-.contact-link strong{font-size:14px;font-weight:600;overflow-wrap:anywhere}
-.contact-link:hover strong{color:#638a32}
-.footer{display:flex;justify-content:space-between;gap:20px;padding:25px clamp(22px,8vw,120px) 34px;color:#778179;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
-.footer b{color:var(--ink);letter-spacing:.14em}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
+.page{min-height:100svh;padding:14px;display:flex;align-items:center;justify-content:center}
+.shell{width:min(1240px,100%);min-height:min(790px,calc(100svh - 28px));position:relative;overflow:hidden;border-radius:28px;background:#142a22;box-shadow:0 24px 80px rgba(14,35,27,.18);color:white}
+.hero-photo{position:absolute;inset:0 0 0 42%;background:linear-gradient(90deg,#142a22 0%,rgba(20,42,34,.86) 7%,rgba(20,42,34,.18) 45%,rgba(10,25,20,.05) 100%),linear-gradient(0deg,rgba(8,20,16,.48),transparent 50%),url("assets/hero.webp") center 42%/cover no-repeat}
+.topbar{position:absolute;z-index:3;left:34px;right:34px;top:28px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font:800 12px Manrope,sans-serif;letter-spacing:.16em}
+.brand-mark{width:32px;height:32px;border:1px solid rgba(255,255,255,.65);border-radius:50%;display:grid;place-items:center;font-size:11px;letter-spacing:0}
+.lang{color:white;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.42);border-radius:99px;padding:9px 13px;font-size:10px;letter-spacing:.1em;backdrop-filter:blur(14px);cursor:pointer}
+.main-copy{position:relative;z-index:2;width:55%;padding:105px 0 205px 7%;max-width:690px}
+.eyebrow,.mini-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:700}
+h1{font:700 clamp(52px,6.5vw,86px)/.94 Manrope,sans-serif;letter-spacing:-.075em;margin:17px 0 18px;max-width:620px}
+.subline{font:600 15px/1.5 Manrope,sans-serif;color:rgba(255,255,255,.94);margin-bottom:12px}
+.intro{font-size:13px;line-height:1.65;color:rgba(255,255,255,.75);max-width:420px;margin:0 0 22px}
+.actions{display:flex;gap:9px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:15px;padding:12px 17px;border-radius:99px;font-size:11px;font-weight:700;transition:.2s}
+.btn.primary{background:white;color:var(--ink)}
+.btn.secondary{border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.1);color:white;backdrop-filter:blur(10px)}
+.btn:hover{transform:translateY(-2px)}
+.info-panel{position:absolute;z-index:2;left:4%;right:4%;bottom:24px;border:1px solid rgba(255,255,255,.26);border-radius:21px;background:rgba(245,249,245,.15);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 12px 40px rgba(0,0,0,.14);padding:18px 20px 16px;display:grid;grid-template-columns:1.1fr 1.3fr 1fr;gap:20px}
+.panel-block{min-width:0}
+.panel-block+.panel-block{border-left:1px solid rgba(255,255,255,.23);padding-left:20px}
+.panel-title{font:700 14px Manrope,sans-serif;margin:7px 0 6px}
+.panel-copy{font-size:10px;line-height:1.55;color:rgba(255,255,255,.76);margin:0}
+.director-row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.director-row img{width:42px;height:42px;border-radius:50%;object-fit:cover;object-position:center 20%;border:1px solid rgba(255,255,255,.5)}
+.director-row strong{font:600 10px/1.4 Manrope,sans-serif;display:block}
+.director-row span{display:block;color:rgba(255,255,255,.65);font-size:9px;margin-top:2px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 14px;margin-top:9px}
+.contact{display:flex;flex-direction:column;gap:3px;min-width:0}
+.contact span{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.contact b{font-size:10px;font-weight:600;overflow-wrap:anywhere}
+.contact:hover b{color:var(--green)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.gallery img{width:100%;height:58px;object-fit:cover;border-radius:7px}
+.location{margin-top:9px;padding-top:8px;border-top:1px solid rgba(255,255,255,.2);font-size:9px;line-height:1.5;color:rgba(255,255,255,.75)}
+.location b{color:white}
+.footerline{position:absolute;z-index:2;right:34px;top:82px;font-size:9px;letter-spacing:.15em;color:rgba(255,255,255,.65);text-transform:uppercase;writing-mode:vertical-rl}
+@media(min-width:1100px){.shell{min-height:760px}.main-copy{padding-top:145px}.info-panel{bottom:28px}}
 @media(max-width:760px){
- .hero{height: min(850px,100svh);min-height:690px;border-radius:0 0 22px 22px}
- .hero:before{background:linear-gradient(180deg,rgba(8,20,17,.18) 0%,rgba(8,20,17,.03) 30%,rgba(8,20,17,.25) 54%,rgba(8,20,17,.88) 100%),url("assets/hero.webp") 51% center/cover no-repeat}
- .nav{padding:19px 20px}.brand{font-size:11px;gap:9px}.brand-mark{width:30px;height:30px}.nav-note{display:none}.lang{padding:9px 12px}
- .hero-content{left:23px;right:23px;bottom:72px}.eyebrow{font-size:9px;margin-bottom:17px}h1{font-size:clamp(52px,14vw,78px);margin-bottom:18px}.hero-copy{font-size:14px;max-width:330px;margin-bottom:23px}.btn{padding:14px 17px;font-size:11px}.hero-index{right:22px;bottom:22px}
- .section{padding:76px 21px}.section-top{display:block;margin-bottom:30px}.section-top .lead{margin-top:20px}.intro-grid{grid-template-columns:1fr;gap:28px}.intro-photo{min-height:390px;height:105vw;max-height:530px;order:2}.intro-text{order:1}.intro-text p{font-size:14px}
- .cards-section{border-radius:22px}.cards{grid-template-columns:1fr;gap:12px}.card{min-height:420px}.cards-head{margin-bottom:30px}.gallery-strip{grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}.gallery-strip img{height:190px;border-radius:14px}
- .invite{padding-top:75px;padding-bottom:75px}.invite-panel{grid-template-columns:1fr;gap:30px;border-radius:22px;padding:30px 24px}.invite-panel h2{font-size:43px}.invite-panel p{font-size:14px}.invite-aside{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:23px 0 0}.contact-layout{grid-template-columns:1fr;gap:32px}.director img{width:82px;height:82px}.contact-list{grid-template-columns:1fr 1fr;gap:8px}.contact-link strong{font-size:12px}.contact-link{padding:14px 0}.footer{padding:22px;flex-direction:column;gap:9px}
+ .page{padding:0;display:block;min-height:100svh;background:#122820}
+ .shell{width:100%;min-height:100svh;border-radius:0;box-shadow:none;display:flex;flex-direction:column;overflow:hidden}
+ .hero-photo{inset:0 0 auto;height:54svh;min-height:390px;background:linear-gradient(180deg,rgba(8,20,16,.22),rgba(8,20,16,.02) 40%,#122820 100%),url("assets/hero.webp") center 39%/cover no-repeat}
+ .topbar{left:20px;right:20px;top:17px}.brand{font-size:11px}.brand-mark{width:29px;height:29px}
+ .main-copy{width:100%;max-width:none;padding:clamp(265px,42svh,380px) 22px 22px}
+ .eyebrow{font-size:8px}
+ h1{font-size:clamp(48px,13vw,68px);margin:11px 0 12px;max-width:450px}
+ .subline{font-size:13px;margin-bottom:7px}
+ .intro{font-size:11px;line-height:1.5;margin-bottom:15px;max-width:420px}
+ .actions{gap:7px}.btn{padding:11px 14px;font-size:10px}
+ .info-panel{position:relative;left:auto;right:auto;bottom:auto;margin:0 12px 12px;padding:15px 14px 13px;border-radius:17px;grid-template-columns:1fr 1fr;gap:13px;background:rgba(242,248,243,.13)}
+ .panel-block+.panel-block{border-left:0;padding-left:0}
+ .panel-block:nth-child(2){border-left:1px solid rgba(255,255,255,.22);padding-left:13px}
+ .panel-block:nth-child(3){grid-column:1/-1;border-top:1px solid rgba(255,255,255,.22);padding-top:11px}
+ .panel-title{font-size:12px;margin:5px 0}
+ .panel-copy{font-size:9px}
+ .director-row{margin-top:8px}.director-row img{width:36px;height:36px}
+ .director-row strong{font-size:9px}
+ .contact-grid{gap:8px 9px;margin-top:8px}
+ .contact span{font-size:7px}.contact b{font-size:9px}
+ .gallery{grid-template-columns:repeat(4,1fr);gap:5px;margin-top:7px}
+ .gallery img{height:54px}
+ .location{font-size:8px;margin-top:7px;padding-top:7px}
+ .footerline{display:none}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
+@media(max-width:380px){
+ .main-copy{padding-top:260px}
+ .info-panel{gap:10px;padding:13px 11px}
+ .panel-block:nth-child(2){padding-left:10px}
+ .contact b{font-size:8px}
+ .gallery img{height:46px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.address-list p {
+  margin: 5px 0;
+  font-size: 9px;
+  line-height: 1.45;
+  color: rgba(255,255,255,.78);
+}
+
+.address-list strong {
+  color: white;
+}
 </style>
 </head>
 <body>
-<header class="hero" id="top">
-  <nav class="nav">
-    <a class="brand" href="#top"><span class="brand-mark">G</span><span>GORIZONT</span></a>
-    <div class="nav-right"><span class="nav-note" data-i18n="navPlace">KLIN · MOSCOW REGION · RUSSIA</span><button class="lang" id="languageToggle" type="button" aria-label="Switch to Russian">RU&nbsp; / &nbsp;EN</button></div>
-  </nav>
-  <div class="hero-content">
-    <div class="eyebrow" data-i18n="heroEyebrow">A CHILDREN’S HEALTH CAMP IN RUSSIA</div>
-    <h1 data-i18n="heroTitle">Welcome to<br>Gorizont.</h1>
-    <p class="hero-copy" data-i18n="heroCopy">A place for new friends, bright discoveries and unforgettable summer days. We would love to welcome you to our camp.</p>
-    <div class="hero-actions">
-      <a class="btn btn-light" href="#welcome" data-i18n="heroButton">Discover the camp <span>↘</span></a>
-      <a class="btn btn-ghost" href="#visit" data-i18n="heroContact">Plan your visit</a>
+<div class="page">
+<div class="shell">
+  <div class="hero-photo" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span>GORIZONT</span></a>
+    <button class="lang" id="lang" type="button">EN / RU</button>
+  </header>
+  <div class="footerline" data-i18n="place">KLIN · MOSCOW REGION · RUSSIA</div>
+  <section class="main-copy">
+    <div class="eyebrow" data-i18n="eyebrow">AN INVITATION TO OUR CHILDREN’S CAMP</div>
+    <h1 data-i18n="title">You’re invited<br>to Gorizont.</h1>
+    <div class="subline" data-i18n="subline">A children's health camp in Klin, Russia.</div>
+    <p class="intro" data-i18n="intro">A place for friendship, creativity, outdoor adventures and unforgettable memories. We would be delighted to welcome you!</p>
+    <div class="actions">
+      <a class="btn primary" href="#contacts" data-i18n="cta">Plan your visit ↗</a>
+      <a class="btn secondary" href="https://klin-gorizont.ru" target="_blank" rel="noopener" data-i18n="siteCta">Explore the camp ↗</a>
     </div>
-  </div>
-  <div class="hero-index">01 — 04 &nbsp; / &nbsp; GORIZONT CAMP</div>
-</header>
+  </section>
 
-<main>
-<section class="section" id="welcome">
-  <div class="intro-grid">
-    <div class="intro-photo reveal">
-      <img src="assets/camp-group.webp" alt="Children and counselors at Gorizont camp">
-      <span class="photo-caption" data-i18n="photoCaption">Together is the best place to be</span>
-    </div>
-    <div class="intro-text reveal">
-      <div class="kicker" data-i18n="aboutKicker">A WARM WELCOME</div>
-      <h2 data-i18n="aboutTitle">A little world full of possibility.</h2>
-      <p data-i18n="aboutCopy">Gorizont is a children's health and recreation camp in Klin, Moscow Region. Surrounded by nature, children spend their days making friends, exploring new interests, playing sports and creating memories together.</p>
-      <p data-i18n="aboutCopy2">Our team creates a welcoming atmosphere where every child can feel included, discover something new and simply enjoy being a child.</p>
-      <div class="signature" data-i18n="aboutSign">We can’t wait to meet you.</div>
-    </div>
-  </div>
-</section>
-
-<section class="section cards-section">
-  <div class="cards-head reveal">
-    <div class="kicker" data-i18n="lifeKicker">LIFE AT GORIZONT</div>
-    <h2 data-i18n="lifeTitle">Every day brings<br>something new.</h2>
-    <p class="lead" data-i18n="lifeLead">From creative workshops to outdoor adventures, there is always something to try, learn and enjoy.</p>
-  </div>
-  <div class="cards">
-    <article class="card reveal">
-      <img src="assets/creative.webp" alt="Children taking part in a creative workshop" loading="lazy">
-      <div class="card-content"><div class="card-number">01 / CREATE</div><h3 data-i18n="creativeTitle">Create & explore</h3><p data-i18n="creativeCopy">Art, hands-on workshops and space to let imagination lead.</p></div>
-    </article>
-    <article class="card reveal">
-      <img src="assets/dance.webp" alt="Campers dancing together outdoors" loading="lazy">
-      <div class="card-content"><div class="card-number">02 / CONNECT</div><h3 data-i18n="friendsTitle">Friends & memories</h3><p data-i18n="friendsCopy">Shared moments, new friendships and a true team spirit.</p></div>
-    </article>
-    <article class="card reveal">
-      <img src="assets/sports.webp" alt="Children playing football at camp" loading="lazy">
-      <div class="card-content"><div class="card-number">03 / MOVE</div><h3 data-i18n="sportsTitle">Play & be active</h3><p data-i18n="sportsCopy">Games, sports and outdoor activities for energetic days.</p></div>
-    </article>
-  </div>
-  <div class="gallery-strip reveal">
-    <img src="assets/community.webp" alt="Campers enjoying a shared event" loading="lazy">
-    <img src="assets/friends.webp" alt="Friends at Gorizont camp" loading="lazy">
-  </div>
-</section>
-
-<section class="section invite" id="visit">
-  <div class="invite-panel reveal">
-    <div>
-      <div class="kicker" data-i18n="inviteKicker">YOU ARE INVITED</div>
-      <h2 data-i18n="inviteTitle">Come and experience Gorizont.</h2>
-      <p data-i18n="inviteCopy">We would be happy to welcome international guests and introduce you to our camp, our activities and the people who make Gorizont special.</p>
-    </div>
-    <div class="invite-aside">
-      <div class="kicker" data-i18n="planKicker">PLANNING A VISIT?</div>
-      <strong data-i18n="planTitle">Please contact us in advance.</strong>
-      <span data-i18n="planCopy">To arrange your visit, please call or email our Director, Dmitry Alexandrovich Goryachev, ahead of time. We will be glad to discuss a suitable date and help you plan your arrival.</span>
-    </div>
-  </div>
-</section>
-
-<section class="section contacts" id="contacts">
-  <div class="contact-layout">
-    <div class="director reveal">
-      <img src="assets/director.webp" alt="Dmitry Alexandrovich Goryachev, Director of Gorizont" loading="lazy">
-      <div><small data-i18n="directorLabel">CAMP DIRECTOR</small><strong>Dmitry Alexandrovich<br>Goryachev</strong></div>
-    </div>
-    <div class="contact-info reveal">
-      <div class="kicker" data-i18n="contactKicker">LET’S STAY IN TOUCH</div>
-      <h2 data-i18n="contactTitle">We’ll be glad to hear from you.</h2>
-      <div class="contact-list">
-        <a class="contact-link" href="tel:+79169939909"><span data-i18n="mobileLabel">Mobile phone</span><strong>+7 (916) 993-99-09 ↗</strong></a>
-        <a class="contact-link" href="tel:+74962475823"><span data-i18n="officeLabel">Office phone</span><strong>+7 (49624) 7-58-23 ↗</strong></a>
-        <a class="contact-link" href="mailto:DGoryachev@bk.ru"><span data-i18n="emailLabel">Email</span><strong>DGoryachev@bk.ru ↗</strong></a>
-        <a class="contact-link" href="https://klin-gorizont.ru" target="_blank" rel="noopener"><span data-i18n="websiteLabel">Official website</span><strong>klin-gorizont.ru ↗</strong></a>
+  <section class="info-panel" id="contacts">
+    <div class="panel-block">
+      <div class="mini-label" data-i18n="welcomeLabel">WELCOME TO GORIZONT</div>
+      <div class="panel-title" data-i18n="visitTitle">We look forward to meeting you.</div>
+      <p class="panel-copy" data-i18n="visitCopy">Please contact our Director in advance to arrange a visit. We’ll help you choose a date and plan your arrival.</p>
+      <div class="director-row">
+        <img src="assets/director.webp" alt="Dmitry Goryachev">
+        <div><strong>Dmitry Alexandrovich<br>Goryachev</strong><span data-i18n="director">Camp Director</span></div>
       </div>
     </div>
-  </div>
-</section>
-</main>
-<footer class="footer"><b>GORIZONT · KLIN · RUSSIA</b><span data-i18n="footerText">A place to grow, explore and belong.</span></footer>
 
+    <div class="panel-block">
+      <div class="mini-label" data-i18n="contactLabel">GET IN TOUCH</div>
+      <div class="panel-title" data-i18n="contactTitle">Contact the Director</div>
+      <div class="contact-grid">
+        <a class="contact" href="tel:+79169939909"><span data-i18n="mobile">Mobile</span><b>+7 (916) 993-99-09 ↗</b></a>
+        <a class="contact" href="tel:+74962475823"><span data-i18n="office">Office</span><b>+7 (49624) 7-58-23 ↗</b></a>
+        <a class="contact" href="mailto:DGoryachev@bk.ru"><span data-i18n="email">Email</span><b>DGoryachev@bk.ru ↗</b></a>
+        <a class="contact" href="https://t.me/DmitriGoriachev" target="_blank" rel="noopener"><span data-i18n="telegramDirector">Telegram · Director</span><b>@DmitriGoriachev ↗</b></a>
+        <a class="contact" href="https://t.me/GorizontOfi" target="_blank" rel="noopener"><span data-i18n="telegramCamp">Telegram · Camp</span><b>@GorizontOfi ↗</b></a>
+        <a class="contact" href="https://klin-gorizont.ru" target="_blank" rel="noopener"><span data-i18n="website">Website</span><b>klin-gorizont.ru ↗</b></a>
+      </div>
+    </div>
+
+    <div class="panel-block">
+      <div class="mini-label" data-i18n="moments">A GLIMPSE OF CAMP LIFE</div>
+      <div class="gallery">
+        <img src="assets/creative.webp" alt="Creative activities" loading="lazy">
+        <img src="assets/friends.webp" alt="Camp friends" loading="lazy">
+        <img src="assets/dance.webp" alt="Camp activities" loading="lazy">
+        <img src="assets/sports.webp" alt="Sports at camp" loading="lazy">
+      </div>
+      <div class="location">
+  <b data-i18n="locationsTitle">Our locations:</b>
+
+  <div class="address-list">
+    <p>
+      <strong data-i18n="address1Title">1. Main office</strong><br>
+      <span data-i18n="address1">21 Sovetskaya Square, Klin, Moscow Region, Russia</span>
+    </p>
+
+    <p>
+      <strong data-i18n="address2Title">2. Main camp territory</strong><br>
+      <span data-i18n="address2">Nikolaevka village, Klin Urban District, Moscow Region, Russia</span>
+    </p>
+
+    <p>
+      <strong data-i18n="address3Title">3. Sports and Recreation Complex</strong><br>
+      <span data-i18n="address3">1 Zelyonaya Street, Spas-Zaulok village, Klin Urban District, Moscow Region, Russia</span>
+    </p>
+  </div>
+</div>
+</div>
+  </section>
+</div>
+</div>
 <script>
-const copy = {
+const translations={
 en:{
-navPlace:"KLIN · MOSCOW REGION · RUSSIA",heroEyebrow:"A CHILDREN’S HEALTH CAMP IN RUSSIA",
-heroTitle:"Welcome to<br>Gorizont.",heroCopy:"A place for new friends, bright discoveries and unforgettable summer days. We would love to welcome you to our camp.",
-heroButton:"Discover the camp <span>↘</span>",heroContact:"Plan your visit",photoCaption:"Together is the best place to be",
-aboutKicker:"A WARM WELCOME",aboutTitle:"A little world full of possibility.",
-aboutCopy:"Gorizont is a children's health and recreation camp in Klin, Moscow Region. Surrounded by nature, children spend their days making friends, exploring new interests, playing sports and creating memories together.",
-aboutCopy2:"Our team creates a welcoming atmosphere where every child can feel included, discover something new and simply enjoy being a child.",
-aboutSign:"We can’t wait to meet you.",lifeKicker:"LIFE AT GORIZONT",lifeTitle:"Every day brings<br>something new.",
-lifeLead:"From creative workshops to outdoor adventures, there is always something to try, learn and enjoy.",
-creativeTitle:"Create & explore",creativeCopy:"Art, hands-on workshops and space to let imagination lead.",
-friendsTitle:"Friends & memories",friendsCopy:"Shared moments, new friendships and a true team spirit.",
-sportsTitle:"Play & be active",sportsCopy:"Games, sports and outdoor activities for energetic days.",
-inviteKicker:"YOU ARE INVITED",inviteTitle:"Come and experience Gorizont.",
-inviteCopy:"We would be happy to welcome international guests and introduce you to our camp, our activities and the people who make Gorizont special.",
-planKicker:"PLANNING A VISIT?",planTitle:"Please contact us in advance.",
-planCopy:"To arrange your visit, please call or email our Director, Dmitry Alexandrovich Goryachev, ahead of time. We will be glad to discuss a suitable date and help you plan your arrival.",
-directorLabel:"CAMP DIRECTOR",contactKicker:"LET’S STAY IN TOUCH",contactTitle:"We’ll be glad to hear from you.",
-mobileLabel:"Mobile phone",officeLabel:"Office phone",emailLabel:"Email",websiteLabel:"Official website",footerText:"A place to grow, explore and belong."
-},
+place:"KLIN · MOSCOW REGION · RUSSIA",eyebrow:"AN INVITATION TO OUR CHILDREN’S CAMP",
+title:"You’re invited<br>to Gorizont.",subline:"A children's health camp in Klin, Russia.",
+intro:"A place for friendship, creativity, outdoor adventures and unforgettable memories. We would be delighted to welcome you!",
+cta:"Plan your visit ↗",siteCta:"Explore the camp ↗",welcomeLabel:"WELCOME TO GORIZONT",
+visitTitle:"We look forward to meeting you.",visitCopy:"Please contact our Director in advance to arrange a visit. We’ll help you choose a date and plan your arrival.",
+director:"Camp Director",contactLabel:"GET IN TOUCH",contactTitle:"Contact the Director",
+mobile:"Mobile",office:"Office",email:"Email",telegramDirector:"Telegram · Director",telegramCamp:"Telegram · Camp",website:"Website",
+moments:"A GLIMPSE OF CAMP LIFE",locationLabel:"Main camp:",location:"Nikolaevka village, Klin District, Moscow Region, Russia.", locationsTitle:"Our locations:",
+address1Title:"1. Main office",
+address1:"21 Sovetskaya Square, Klin, Moscow Region, Russia",
+address2Title:"2. Main camp territory",
+address2:"Nikolaevka village, Klin Urban District, Moscow Region, Russia",
+address3Title:"3. Sports and Recreation Complex",
+address3:"1 Zelyonaya Street, Spas-Zaulok village, Klin Urban District, Moscow Region, Russia",},
 ru:{
-navPlace:"КЛИН · МОСКОВСКАЯ ОБЛАСТЬ · РОССИЯ",heroEyebrow:"ДЕТСКИЙ ОЗДОРОВИТЕЛЬНЫЙ ЛАГЕРЬ В РОССИИ",
-heroTitle:"Добро пожаловать<br>в «Горизонт».",heroCopy:"Место новых друзей, ярких открытий и незабываемых летних дней. Будем рады видеть вас в нашем лагере.",
-heroButton:"О лагере <span>↘</span>",heroContact:"Запланировать визит",photoCaption:"Вместе — лучше всего",
-aboutKicker:"МЫ ВАМ РАДЫ",aboutTitle:"Маленький мир больших возможностей.",
-aboutCopy:"«Горизонт» — детский оздоровительный лагерь в Клину Московской области. Среди природы ребята находят новых друзей, открывают интересы, занимаются спортом и создают общие воспоминания.",
-aboutCopy2:"Наша команда создаёт атмосферу, в которой каждый ребёнок чувствует себя частью коллектива, пробует новое и просто наслаждается детством.",
-aboutSign:"Будем рады знакомству!",lifeKicker:"ЖИЗНЬ В «ГОРИЗОНТЕ»",lifeTitle:"Каждый день —<br>что-то новое.",
-lifeLead:"Творческие мастерские, активный отдых и приключения на свежем воздухе — у нас всегда есть чему научиться и чему порадоваться.",
-creativeTitle:"Творчество и открытия",creativeCopy:"Рисование, мастер-классы и простор для воображения.",
-friendsTitle:"Друзья и воспоминания",friendsCopy:"Общие моменты, новые знакомства и настоящий командный дух.",
-sportsTitle:"Игры и движение",sportsCopy:"Спорт, игры и активности для энергичных дней.",
-inviteKicker:"МЫ ПРИГЛАШАЕМ ВАС",inviteTitle:"Приезжайте в «Горизонт».",
-inviteCopy:"Мы будем рады принять иностранных гостей, познакомить вас с лагерем, нашими занятиями и людьми, благодаря которым «Горизонт» становится особенным местом.",
-planKicker:"ПЛАНИРУЕТЕ ВИЗИТ?",planTitle:"Пожалуйста, свяжитесь с нами заранее.",
-planCopy:"Чтобы договориться о посещении лагеря, просим вас заблаговременно позвонить или написать директору — Дмитрию Александровичу Горячеву. Мы обсудим удобную дату и поможем спланировать ваш приезд.",
-directorLabel:"ДИРЕКТОР ЛАГЕРЯ",contactKicker:"БУДЕМ НА СВЯЗИ",contactTitle:"Будем рады вашему сообщению.",
-mobileLabel:"Мобильный телефон",officeLabel:"Рабочий телефон",emailLabel:"Электронная почта",websiteLabel:"Официальный сайт",footerText:"Место, где растут, открывают новое и находят друзей."
-}
+place:"КЛИН · МОСКОВСКАЯ ОБЛАСТЬ · РОССИЯ",eyebrow:"ПРИГЛАШЕНИЕ В НАШ ДЕТСКИЙ ЛАГЕРЬ",
+title:"Мы приглашаем<br>вас в «Горизонт».",subline:"Детский оздоровительный лагерь в Клину, Россия.",
+intro:"Место дружбы, творчества, приключений на природе и незабываемых воспоминаний. Будем очень рады видеть вас!",
+cta:"Запланировать визит ↗",siteCta:"О лагере ↗",welcomeLabel:"ДОБРО ПОЖАЛОВАТЬ В «ГОРИЗОНТ»",
+visitTitle:"Будем рады знакомству!",visitCopy:"Пожалуйста, заранее свяжитесь с директором, чтобы согласовать визит. Мы поможем выбрать дату и спланировать приезд.",
+director:"Директор лагеря",contactLabel:"СВЯЗАТЬСЯ С НАМИ",contactTitle:"Контакты директора",
+mobile:"Мобильный",office:"Рабочий",email:"Электронная почта",telegramDirector:"Telegram · директор",telegramCamp:"Telegram · лагерь",website:"Сайт",
+moments:"НЕМНОГО О ЖИЗНИ ЛАГЕРЯ",locationLabel:"Основная территория:",location:"д. Николаевка, г.о. Клин, Московская область.", locationsTitle:"Наши адреса:",
+address1Title:"1. Основной офис",
+address1:"Московская область, г. Клин, Советская площадь, д. 21",
+address2Title:"2. Основная территория лагеря",
+address2:"Московская область, г. о. Клин, д. Николаевка",
+address3Title:"3. Спортивно-оздоровительный комплекс",
+address3:"Московская область, г. о. Клин, с. Спас-Заулок, ул. Зелёная, д. 1"}
 };
-let language="en";
-const toggle=document.getElementById("languageToggle");
-function setLanguage(lang){
- language=lang;document.documentElement.lang=lang;
- document.querySelectorAll("[data-i18n]").forEach(el=>{
-  const key=el.dataset.i18n;if(copy[lang][key])el.innerHTML=copy[lang][key];
- });
- toggle.innerHTML=lang==="en"?"EN&nbsp; / &nbsp;<u>RU</u>":"<u>RU</u>&nbsp; / &nbsp;EN";
- toggle.setAttribute("aria-label",lang==="en"?"Switch to Russian":"Переключить на английский");
-}
-toggle.addEventListener("click",()=>setLanguage(language==="en"?"ru":"en"));
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
- if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
-}),{threshold:.12});
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+let lang="en";
+document.getElementById("lang").addEventListener("click",()=>{
+ lang=lang==="en"?"ru":"en";document.documentElement.lang=lang;
+ document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(translations[lang][k])el.innerHTML=translations[lang][k]});
+ document.getElementById("lang").innerHTML=lang==="en"?"EN / RU":"RU / EN";
+});
 </script>
 </body>
 </html>
